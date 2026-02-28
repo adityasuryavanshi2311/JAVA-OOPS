@@ -6,12 +6,12 @@ public class BubbleSort{
 
     Scanner input = new Scanner(System.in);
 
-     for(int i=0; i<array.length-1; i++) {
-      System.out.printf("Enter Element no %d: ", i);
+     for(int i=0; i<array.length; i++) {
+      System.out.printf("Enter Element no %d: ", i+1);
       array[i] = input.nextInt();
     }
       
-    for(int i=0; i<array.length-1; i++) {
+    for(int i=0; i<array.length; i++) {
       for(int j=0; j<array.length-1-i; j++) {
         if(array[j] > array[j+1]) {
           int temp = array[j];
@@ -20,6 +20,7 @@ public class BubbleSort{
         }
       }
     }
+    printArray(array);
   }
 
   //sorting in descending order by function calling 
@@ -41,10 +42,12 @@ public class BubbleSort{
         }
       }
     }
+    printArray(array);
   }
 
   public static void printArray(int array[]) {
 
+    System.out.println("\n* * * * Sorted Elements * * * *");
     for(int i=0; i<array.length; i++) {
       System.out.print(array[i] + " ");
     }
@@ -54,7 +57,7 @@ public class BubbleSort{
 
     Scanner input = new Scanner(System.in);
 
-    System.out.print("Enter no. of Elements: ");
+    System.out.print("Enter Total no. of Elements: ");
     int size = input.nextInt();
 
     int[] array = new int[size];
