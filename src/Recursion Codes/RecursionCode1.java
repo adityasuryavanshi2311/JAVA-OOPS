@@ -4,11 +4,11 @@ public class RecursionCode1 {
 	
 	public static int recurFunction(int number) {
 		
-		System.out.println(number);
-		if(number < 5) { //runs 5-1 times 
-			recurFunction(number + 1); //calls it self by passing incremented number
+		if(number == 6) { // when condition becomes true returns to main 
+			return; // returns when matchs condition  
 		}
-    return number; //returns 5 when if condition becomes false 
+		System.out.println(number); // prints number
+		recurFunction(number + 1); // calls it self by passing incremented number
 	}
 	
 	public static void main(String args[]) {
@@ -16,4 +16,3 @@ public class RecursionCode1 {
 		recurFunction(number); // calls function by passing number(1)
 	}
 }
-
