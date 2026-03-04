@@ -22,7 +22,7 @@ public class numberPrinting {
 		
 		int number = 1; // starting index
 		
-		recurFunction(number,); // calls function by passing number(1) and ending index by input
+		recurFunction(number, endNum); // calls function by passing number(1) and ending index by input
 	}
 }
 
