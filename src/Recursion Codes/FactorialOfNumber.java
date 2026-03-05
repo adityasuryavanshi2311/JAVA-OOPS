@@ -2,15 +2,14 @@ import java.util.*;
 
 public class FactorialOfNumber {
 	
-	public static int factorialOfNumber(int number, int store){
-		
-		store *= number;
-		if(number == 1) {
-			System.out.println(store);
-			return store;
+	public static int factorialOfNumber(int number){
+
+		if(number == 1 || number == 0) {;
+			return 1;
 		}
-		factorialOfNumber(number-1, store);
-		return 0;
+		int fact = factorialOfNumber(number-1);
+		fact = number * fact;
+		return fact;
 	}
 	
 	public static void main(String args[]) {
@@ -20,13 +19,8 @@ public class FactorialOfNumber {
 		System.out.print("Enter a number for finding factorial: ");
 		int number = input.nextInt();
 		
-		int store = 1;
-		factorialOfNumber(number, store);
-		// int factorial = factorialOfNumber(number, store);
-		// System.out.print("Factorial of number: " + factorial);
+		int factorial = factorialOfNumber(number);
+		System.out.print("Factorial of number: " + factorial);
 		
 	}
 }
-
-
-
