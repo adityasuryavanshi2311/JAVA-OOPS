@@ -4,13 +4,15 @@ public class PowerOfNumber {
 
   // function to calculate output
   public static void findPower(int base, int pow) {
-    int i = 2;
-    if(i == pow) {
-      System.out.print(base);
-      return;
+    if(pow == 0) {
+      return 1;
     }
-    base = base * i;
-    findPower(base, i+1);
+    if(base == 0){ // base condition if input - 0
+      return 0;
+    }
+    int xPownm1 = findPower(base, pow-1);
+    int xPown = base * xPownm1;
+    return xPown;
   }
 
   public static void main(String args[]) {
@@ -25,6 +27,6 @@ public class PowerOfNumber {
     int pow = input.nextInt();
 
     // passing inputs (base number, power to calculate O/P)
-    findPower(base, pow); 
+    System.out.print(findPower(base, pow)); 
   }
 }
