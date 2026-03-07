@@ -1,19 +1,22 @@
+import java.util.Scanner;
 public class ReverseString { 
 
-  public static void ReversePrint(String name, int length) {
-    if(length == 0) {
-      return;
+  public static void ReversePrint(String word, int length) {
+    if(length < 0) {
+      return "";
     }
-    String newString = "";
-    newString = newString + name.charAt(length);
-    ReversePrint(newString, length-1);
+    String newString = word.charAt(length) + ReversePrint(word, length - 1);
+    return newString;
   }
 
   public static void main(String args[]) {
 
-    String name  = "JAVA";
-    int length = name.length()-1;
-    ReversePrint(name, length);
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter a word: ");
+    String name = input.nextLine();
     
+    int length = name.length()-1;
+    System.out.print("Revese of the word: "+ ReversePrint(name, length));
   } 
 }
