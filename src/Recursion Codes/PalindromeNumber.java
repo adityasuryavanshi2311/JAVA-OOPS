@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class PalindromeNumber {
+    
+    static int reverse = 0;
 
     public static int reverseNumber(int num) {
 
