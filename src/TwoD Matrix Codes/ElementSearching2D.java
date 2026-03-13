@@ -32,12 +32,9 @@ public class ElementSearching2D {
       for(int j=0; j<cols; j++) {
         if(matrix[i][j] == value) {
           System.out.printf("value found at index %d,%d\n", i+1,j+1);
-          break;
-        } else {
-          System.out.println("value not found.");
         }
       }
     }
-      
+      System.out.println("\nElement Not Found.");
   }
 }
